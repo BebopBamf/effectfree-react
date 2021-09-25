@@ -1,12 +1,16 @@
 import {
   Link as ChakraLink,
   Text,
+  IconButton,
   Box,
   Flex,
   HStack,
+  VStack,
   Spacer,
+  Collapse,
+  useDisclosure,
 } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { ExternalLinkIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Logo = () => (
@@ -45,12 +49,58 @@ const DesktopNavLinks = () => (
   </HStack>
 );
 
-const Navbar = () => (
-  <Flex p="4" align="center" as="nav">
-    <Logo />
-    <Spacer />
-    <DesktopNavLinks />
-  </Flex>
+type MobileMenuProps = {
+  isOpen: boolean;
+};
+
+const MobileMenu = ({ isOpen }: MobileMenuProps) => (
+  <Collapse in={isOpen} animateOpacity>
+    <VStack spacing="4">
+      <NavLinks />
+    </VStack>
+  </Collapse>
 );
+
+type ButtonToggle = {
+  toggleButton: () => void;
+};
+
+const HamburgerButton = ({ toggleButton }: ButtonToggle) => (
+  <IconButton
+    aria-label="Open Navigation Menu"
+    onClick={() => toggleButton()}
+    icon={<HamburgerIcon />}
+    isRound
+  />
+);
+
+const CloseButton = ({ toggleButton }: ButtonToggle) => (
+  <IconButton
+    aria-label="Close Navigation Menu"
+    onClick={() => toggleButton()}
+    icon={<CloseIcon />}
+    isRound
+  />
+);
+
+const Navbar = () => {
+  const { isOpen, onClose, onOpen } = useDisclosure();
+
+  return (
+    <Box as="nav">
+      <Flex p="4" align="center">
+        <Logo />
+        <Spacer />
+        <DesktopNavLinks />
+        {isOpen ? (
+          <CloseButton toggleButton={onClose} />
+        ) : (
+          <HamburgerButton toggleButton={onOpen} />
+        )}
+      </Flex>
+      <MobileMenu isOpen={isOpen} />
+    </Box>
+  );
+};
 
 export default Navbar;
