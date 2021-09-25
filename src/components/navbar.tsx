@@ -44,7 +44,7 @@ const NavLinks = () => (
 );
 
 const DesktopNavLinks = () => (
-  <HStack spacing="4" display={['none', 'flex']}>
+  <HStack spacing="4" display={['none', 'none', 'flex']}>
     <NavLinks />
   </HStack>
 );
@@ -68,7 +68,7 @@ type ButtonToggle = {
 const HamburgerButton = ({ toggleButton }: ButtonToggle) => (
   <IconButton
     aria-label="Open Navigation Menu"
-    display={['inline-flex', 'none']}
+    display={['inline-flex', 'inline-flex', 'none']}
     onClick={() => toggleButton()}
     icon={<HamburgerIcon />}
     isRound
@@ -78,7 +78,7 @@ const HamburgerButton = ({ toggleButton }: ButtonToggle) => (
 const CloseButton = ({ toggleButton }: ButtonToggle) => (
   <IconButton
     aria-label="Close Navigation Menu"
-    display={['inline-flex', 'none']}
+    display={['inline-flex', 'inline-flex', 'none']}
     onClick={() => toggleButton()}
     icon={<CloseIcon />}
     isRound
