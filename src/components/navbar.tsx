@@ -68,6 +68,7 @@ type ButtonToggle = {
 const HamburgerButton = ({ toggleButton }: ButtonToggle) => (
   <IconButton
     aria-label="Open Navigation Menu"
+    display={['inline-flex', 'none']}
     onClick={() => toggleButton()}
     icon={<HamburgerIcon />}
     isRound
@@ -77,6 +78,7 @@ const HamburgerButton = ({ toggleButton }: ButtonToggle) => (
 const CloseButton = ({ toggleButton }: ButtonToggle) => (
   <IconButton
     aria-label="Close Navigation Menu"
+    display={['inline-flex', 'none']}
     onClick={() => toggleButton()}
     icon={<CloseIcon />}
     isRound
