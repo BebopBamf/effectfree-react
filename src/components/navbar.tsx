@@ -10,6 +10,7 @@ import {
   VStack,
   Spacer,
   Collapse,
+  useColorMode,
   useDisclosure,
 } from '@chakra-ui/react';
 import {
@@ -94,7 +95,23 @@ const CloseButton = ({ toggleButton }: ButtonToggle) => (
   />
 );
 
+type ColorModeButtonProps = {
+  toggleColors: () => void;
+  colorMode: string;
+};
+
+const ColorModeButton = ({ toggleColors, colorMode }: ColorModeButtonProps) => (
+  <IconButton
+    aria-label="Turn darkmode on"
+    m="2"
+    onClick={toggleColors}
+    icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+    isRound
+  />
+);
+
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onClose, onOpen } = useDisclosure();
 
   return (
@@ -103,12 +120,7 @@ const Navbar = () => {
         <Logo />
         <Spacer />
         <DesktopNavLinks />
-        <IconButton
-          aria-label="Toggle Darkmode"
-          m="2"
-          icon={<MoonIcon />}
-          isRound
-        />
+        <ColorModeButton toggleColors={toggleColorMode} colorMode={colorMode} />
         {isOpen ? (
           <CloseButton toggleButton={onClose} />
         ) : (
