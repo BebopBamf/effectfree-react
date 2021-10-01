@@ -8,7 +8,7 @@ import Blog from './pages/blog';
 import Navbar from './components/navbar';
 
 const config = {
-  initialColorMode: 'light',
+  initialColorMode: 'system',
   useSystemColorMode: true,
 };
 
@@ -16,8 +16,8 @@ const theme = extendTheme({ config });
 
 const App = () => (
   <BrowserRouter>
-    <ChakraProvider>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+    <ChakraProvider theme={theme}>
       <Navbar />
 
       <Switch>
