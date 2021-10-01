@@ -1,20 +1,35 @@
 import {
-  Link as ChakraLink,
   Text,
+  IconButton,
+  Link as ChakraLink,
+  LinkOverlay,
+  LinkBox,
   Box,
   Flex,
   HStack,
+  VStack,
   Spacer,
+  Collapse,
+  useColorMode,
+  useDisclosure,
 } from '@chakra-ui/react';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
+import {
+  ExternalLinkIcon,
+  HamburgerIcon,
+  CloseIcon,
+  SunIcon,
+  MoonIcon,
+} from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Logo = () => (
-  <Box>
+  <LinkBox>
     <Text fontSize="lg" fontWeight="semibold">
-      Effect Free
+      <LinkOverlay as={RouterLink} to="/">
+        Effect Free
+      </LinkOverlay>
     </Text>
-  </Box>
+  </LinkBox>
 );
 
 type LinkProps = {
@@ -30,7 +45,6 @@ const Link = ({ to, value }: LinkProps) => (
 
 const NavLinks = () => (
   <>
-    <Link to="/" value="Home" />
     <Link to="/portfolio" value="Portfolio" />
     <Link to="/blog" value="Blog" />
     <ChakraLink href="https://memsafe.effectfree.dev" isExternal>
@@ -40,17 +54,82 @@ const NavLinks = () => (
 );
 
 const DesktopNavLinks = () => (
-  <HStack spacing="4" display={['none', 'flex']}>
+  <HStack spacing="4" display={['none', 'none', 'flex']}>
     <NavLinks />
   </HStack>
 );
 
-const Navbar = () => (
-  <Flex p="4" align="center" as="nav">
-    <Logo />
-    <Spacer />
-    <DesktopNavLinks />
-  </Flex>
+type MobileMenuProps = {
+  isOpen: boolean;
+};
+
+const MobileMenu = ({ isOpen }: MobileMenuProps) => (
+  <Collapse in={isOpen} animateOpacity>
+    <VStack spacing="4">
+      <NavLinks />
+    </VStack>
+  </Collapse>
 );
+
+type ButtonToggle = {
+  toggleButton: () => void;
+};
+
+const HamburgerButton = ({ toggleButton }: ButtonToggle) => (
+  <IconButton
+    aria-label="Open Navigation Menu"
+    display={['inline-flex', 'inline-flex', 'none']}
+    onClick={() => toggleButton()}
+    icon={<HamburgerIcon />}
+    isRound
+  />
+);
+
+const CloseButton = ({ toggleButton }: ButtonToggle) => (
+  <IconButton
+    aria-label="Close Navigation Menu"
+    display={['inline-flex', 'inline-flex', 'none']}
+    onClick={() => toggleButton()}
+    icon={<CloseIcon />}
+    isRound
+  />
+);
+
+type ColorModeButtonProps = {
+  toggleColors: () => void;
+  colorMode: string;
+};
+
+const ColorModeButton = ({ toggleColors, colorMode }: ColorModeButtonProps) => (
+  <IconButton
+    aria-label="Turn darkmode on"
+    m="2"
+    onClick={toggleColors}
+    icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+    isRound
+  />
+);
+
+const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onClose, onOpen } = useDisclosure();
+
+  return (
+    <Box as="nav">
+      <Flex p="4" align="center">
+        <Logo />
+        <Spacer />
+        <DesktopNavLinks />
+        <ColorModeButton toggleColors={toggleColorMode} colorMode={colorMode} />
+        {isOpen ? (
+          <CloseButton toggleButton={onClose} />
+        ) : (
+          <HamburgerButton toggleButton={onOpen} />
+        )}
+      </Flex>
+      <MobileMenu isOpen={isOpen} />
+    </Box>
+  );
+};
 
 export default Navbar;
