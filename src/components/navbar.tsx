@@ -1,7 +1,9 @@
 import {
-  Link as ChakraLink,
   Text,
   IconButton,
+  Link as ChakraLink,
+  LinkOverlay,
+  LinkBox,
   Box,
   Flex,
   HStack,
@@ -10,15 +12,23 @@ import {
   Collapse,
   useDisclosure,
 } from '@chakra-ui/react';
-import { ExternalLinkIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import {
+  ExternalLinkIcon,
+  HamburgerIcon,
+  CloseIcon,
+  SunIcon,
+  MoonIcon,
+} from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Logo = () => (
-  <Box>
+  <LinkBox>
     <Text fontSize="lg" fontWeight="semibold">
-      Effect Free
+      <LinkOverlay as={RouterLink} to="/">
+        Effect Free
+      </LinkOverlay>
     </Text>
-  </Box>
+  </LinkBox>
 );
 
 type LinkProps = {
@@ -34,7 +44,6 @@ const Link = ({ to, value }: LinkProps) => (
 
 const NavLinks = () => (
   <>
-    <Link to="/" value="Home" />
     <Link to="/portfolio" value="Portfolio" />
     <Link to="/blog" value="Blog" />
     <ChakraLink href="https://memsafe.effectfree.dev" isExternal>
@@ -94,6 +103,12 @@ const Navbar = () => {
         <Logo />
         <Spacer />
         <DesktopNavLinks />
+        <IconButton
+          aria-label="Toggle Darkmode"
+          m="2"
+          icon={<MoonIcon />}
+          isRound
+        />
         {isOpen ? (
           <CloseButton toggleButton={onClose} />
         ) : (

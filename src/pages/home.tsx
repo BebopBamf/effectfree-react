@@ -1,5 +1,11 @@
-import { Heading } from '@chakra-ui/react';
+import { Heading, Grid } from '@chakra-ui/react';
 
-const Home = () => <Heading p="4">Hello Homepage!</Heading>;
+const Home = () => (
+  <Grid>
+    <Heading p="4" textAlign="center">
+      Effect Free
+    </Heading>
+  </Grid>
+);
 
 export default Home;
