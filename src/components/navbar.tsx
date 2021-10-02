@@ -54,7 +54,7 @@ const NavLinks = () => (
 );
 
 const DesktopNavLinks = () => (
-  <HStack spacing="4" display={['none', 'none', 'flex']}>
+  <HStack mx="4" spacing="4" display={['none', 'none', 'flex']}>
     <NavLinks />
   </HStack>
 );
