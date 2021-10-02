@@ -1,4 +1,28 @@
-import { Text, Heading, Container, Grid, Box } from '@chakra-ui/react';
+import {
+  Text,
+  Heading,
+  Image,
+  AspectRatio,
+  Container,
+  Grid,
+  Box,
+} from '@chakra-ui/react';
+
+import linux from '../../static/linux.jpg';
+
+const Header = () => (
+  <Container as="header" pb="4" maxW="container.xl">
+    <Heading p="4" textAlign="center">
+      Effect Free
+    </Heading>
+    <Text size="lg" fontWeight="semibold" textAlign="center">
+      Life without side effects and more
+    </Text>
+    <AspectRatio maxH="lg">
+      <Image fit="cover" src={linux} alt="Banner Image" />
+    </AspectRatio>
+  </Container>
+);
 
 const About = () => (
   <Container id="about" maxW="container.xl" py="4" centerContent>
@@ -31,14 +55,7 @@ const About = () => (
 
 const Home = () => (
   <Grid>
-    <Box as="header" pb="4">
-      <Heading p="4" textAlign="center">
-        Effect Free
-      </Heading>
-      <Text size="lg" fontWeight="semibold" textAlign="center">
-        Life without side effects and more
-      </Text>
-    </Box>
+    <Header />
     <About />
   </Grid>
 );
