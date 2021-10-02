@@ -4,6 +4,7 @@ import {
   Link as ChakraLink,
   LinkOverlay,
   LinkBox,
+  Image,
   Box,
   Flex,
   HStack,
@@ -22,8 +23,17 @@ import {
 } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
 
+import logo from '../../static/icon.svg';
+
 const Logo = () => (
-  <LinkBox>
+  <LinkBox display="inline-flex" alignItems="center">
+    <Image
+      borderRadius="full"
+      boxSize="3rem"
+      p="2"
+      src={logo}
+      alt="Effect Free Logo"
+    />
     <Text fontSize="lg" fontWeight="semibold">
       <LinkOverlay as={RouterLink} to="/">
         Effect Free
