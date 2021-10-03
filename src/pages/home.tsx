@@ -1,17 +1,22 @@
 import {
+  Skeleton,
+  SkeletonCircle,
+  SkeletonText,
+  Avatar,
   Text,
   Heading,
   Image,
   AspectRatio,
+  VStack,
   Container,
   Grid,
-  Box,
+  GridItem,
 } from '@chakra-ui/react';
 
 import linux from '../../static/linux.jpg';
 
 const Header = () => (
-  <Container as="header" pb="4" maxW="container.xl">
+  <Container as="header" maxW="container.xl">
     <Heading p="4" textAlign="center">
       Effect Free
     </Heading>
@@ -25,7 +30,7 @@ const Header = () => (
 );
 
 const About = () => (
-  <Container id="about" maxW="container.xl" py="4" centerContent>
+  <Container id="about" maxW="container.xl" centerContent>
     <Heading>About</Heading>
     <Text p="2">
       Effect Free in programming means that a function does not affect the
@@ -39,25 +44,56 @@ const About = () => (
       keep pushing University aged students to learn dumb object oriented
       principles for applications programming, and planning rediculously badly
       written overplanned and illogical 'enterprise' applications. Some examples
-      would be UML and whiteboard code interviews. This is not to attack any
-      projects unless it is written in Java, then what are you doing to your
-      braincells, but rather to push people to learn things that actually do
-      matter. Things like performance, state management, code reusability and
-      readability and safety. What is the point of developing software that is
-      going to fail like we do in University, and not knowing how to properly
-      write reusable code. That being said a lot of this is in a light hearted
-      sense, and I have no plan going forward to say drop everything your doing
-      and rewrite in Haskell or Rust, but more so to educate people in adapting
-      application and state safety into our existing programming toolbox.
+      would be UML and whiteboard code interviews.
+    </Text>
+    <Text p="2">
+      This is not to attack any projects unless it is written in Java, then what
+      are you doing to your braincells, but rather to push people to learn
+      things that actually do matter. Things like performance, state management,
+      code reusability and readability and safety.{' '}
+    </Text>
+    <Text p="2">
+      What is the point of developing software that is going to fail like we do
+      in University, and not knowing how to properly write reusable code. That
+      being said a lot of this is in a light hearted sense, and I have no plan
+      going forward to say drop everything your doing and rewrite in Haskell or
+      Rust, but more so to educate people in adapting application and state
+      safety into our existing programming toolbox.
     </Text>
   </Container>
 );
 
+const Profile = () => (
+  <Container id="mendoza" maxW="container.xl" centerContent>
+    <Heading>Who am I?</Heading>
+    <Grid
+      w="100%"
+      py="4"
+      templateRows="repeat(3, 1fr)"
+      templateColumns="repeat(5, 1fr)"
+      gap={4}
+    >
+      <GridItem rowSpan={3} colSpan={1} justifySelf="center">
+        <SkeletonCircle size="3xs" />
+      </GridItem>
+      <GridItem colSpan={4}>
+        <Skeleton>
+          <Text fontSize="md">Text</Text>
+        </Skeleton>
+      </GridItem>
+      <GridItem rowSpan={2} colSpan={4}>
+        <SkeletonText />
+      </GridItem>
+    </Grid>
+  </Container>
+);
+
 const Home = () => (
-  <Grid>
+  <VStack spacing="4" pt="16">
     <Header />
     <About />
-  </Grid>
+    <Profile />
+  </VStack>
 );
 
 export default Home;
