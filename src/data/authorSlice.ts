@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+import type { RootState } from '../store';
+
 import { SlugType } from './common';
 
 export interface AuthorType {
@@ -8,7 +10,7 @@ export interface AuthorType {
   name: string;
 }
 
-export const authorsSlice = createSlice({
+export const authorSlice = createSlice({
   name: 'authors',
   initialState: {
     value: [
@@ -24,3 +26,5 @@ export const authorsSlice = createSlice({
   },
   reducers: {},
 });
+
+export default authorSlice.reducer;

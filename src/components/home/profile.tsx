@@ -11,7 +11,11 @@ import {
 
 import { AuthorType } from '../../data/authorSlice';
 
-const Profile = (props: Readonly<AuthorType>) => {
+type ProfileProps = {
+  profile: Readonly<AuthorType>;
+};
+
+const Profile = (props: ProfileProps) => {
   /*
   const [testProfile, setTestProfile] = useState(null);
 
@@ -39,7 +43,9 @@ const Profile = (props: Readonly<AuthorType>) => {
   });
   */
 
-  const { name } = props;
+  const { name, slug } = props.profile;
+
+  const title = `${name} (${slug.current})`;
 
   return (
     <Container id="mendoza" maxW="container.xl" centerContent>
@@ -56,7 +62,9 @@ const Profile = (props: Readonly<AuthorType>) => {
         </GridItem>
         <GridItem colSpan={4}>
           <Skeleton isLoaded>
-            <Text fontSize="md">{name}</Text>
+            <Text fontSize="lg" fontWeight="semibold">
+              {title}
+            </Text>
           </Skeleton>
         </GridItem>
         <GridItem rowSpan={2} colSpan={4}>
