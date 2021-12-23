@@ -35,7 +35,7 @@ export const fetchAuthors = createAsyncThunk(
       bio
     }`,
     );
-    return data;
+    return data as AuthorType[];
   },
 );
 
