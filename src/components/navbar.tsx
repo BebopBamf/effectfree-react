@@ -125,8 +125,8 @@ const Navbar = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
 
   return (
-    <Box as="nav">
-      <Flex p="4" align="center">
+    <Box w="100%" pos="fixed" zIndex="docked" as="nav">
+      <Flex px="4" align="center">
         <Logo />
         <Spacer />
         <DesktopNavLinks />

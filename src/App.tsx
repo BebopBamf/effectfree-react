@@ -1,9 +1,19 @@
+import { Suspense, lazy } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { extendTheme, ColorModeScript, ChakraProvider } from '@chakra-ui/react';
+import { Provider } from 'react-redux';
+import {
+  extendTheme,
+  Progress,
+  Heading,
+  ColorModeScript,
+  ChakraProvider,
+} from '@chakra-ui/react';
 
-import Home from './pages/home';
-import Portfolio from './pages/portfolio';
-import Blog from './pages/blog';
+import store from './store';
+
+const Home = lazy(() => import('./pages/home'));
+const Portfolio = lazy(() => import('./pages/portfolio'));
+const Blog = lazy(() => import('./pages/blog'));
 
 import Navbar from './components/navbar';
 
@@ -15,26 +25,37 @@ const config = {
 const theme = extendTheme({ config });
 
 const App = () => (
-  <BrowserRouter>
-    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-    <ChakraProvider theme={theme}>
-      <Navbar />
+  <Suspense fallback={<Progress isIndeterminate />}>
+    <BrowserRouter>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <Provider store={store}>
+        <ChakraProvider theme={theme}>
+          <Navbar />
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
 
-      <Switch>
-        <Route path="/portfolio">
-          <Portfolio />
-        </Route>
+            <Route path="/portfolio">
+              <Portfolio />
+            </Route>
 
-        <Route path="/blog">
-          <Blog />
-        </Route>
+            <Route path="/blog">
+              <Blog />
+            </Route>
 
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </ChakraProvider>
-  </BrowserRouter>
+            <Route path="/test-loading">
+              <Progress />
+            </Route>
+
+            <Route path="/*">
+              <Heading>Page Not Found!</Heading>
+            </Route>
+          </Switch>
+        </ChakraProvider>
+      </Provider>
+    </BrowserRouter>
+  </Suspense>
 );
 
 export default App;
