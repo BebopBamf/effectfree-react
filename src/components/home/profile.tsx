@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {
   Grid,
   GridItem,
@@ -9,43 +10,34 @@ import {
   SkeletonText,
 } from '@chakra-ui/react';
 
-import { AuthorType } from '../../data/authorSlice';
+import { useAppDispatch, useAppSelector } from '../../hooks/data';
 
-type ProfileProps = {
-  profile: Readonly<AuthorType>;
-};
+import {
+  selectAuthorBySlug,
+  selectStatus,
+  selectErrors,
+  fetchAuthors,
+} from '../../data/authorSlice';
 
-const Profile = (props: ProfileProps) => {
-  /*
-  const [testProfile, setTestProfile] = useState(null);
+import type { AuthorType } from '../../data/authorSlice';
 
-  const fetchMendoza = async () => {
-    try {
-      const data = await sanityClient.fetch(
-        `*[_type == "author" && slug.current == "emendoza"] {
-          _id,
-          slug,
-          name,
-          image,
-          description,
-          bio
-        }`,
-      );
-      console.log(data);
-      setTestProfile(data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+const Profile = () => {
+  const dispatch = useAppDispatch();
+  const userEmendoza = useAppSelector(selectAuthorBySlug('emendoza'));
+
+  const status = useAppSelector(selectStatus);
+  const error = useAppSelector(selectErrors);
+
+  console.log(status);
+
+  const isLoading = status === 'loading' || status === 'idle';
 
   useEffect(() => {
-    fetchMendoza();
-  });
-  */
-
-  const { name, slug } = props.profile;
-
-  const title = `${name} (${slug.current})`;
+    if (status === 'idle') {
+      dispatch(fetchAuthors());
+      console.log(status);
+    }
+  }, [status, dispatch]);
 
   return (
     <Container id="mendoza" maxW="container.xl" centerContent>
@@ -58,13 +50,11 @@ const Profile = (props: ProfileProps) => {
         gap={4}
       >
         <GridItem rowSpan={3} colSpan={1} justifySelf="center">
-          <SkeletonCircle size="3xs" />
+          <SkeletonCircle size="3xs" isLoaded={!isLoading} />
         </GridItem>
         <GridItem colSpan={4}>
-          <Skeleton isLoaded>
-            <Text fontSize="lg" fontWeight="semibold">
-              {title}
-            </Text>
+          <Skeleton isLoaded={!isLoading}>
+            <Text fontSize="lg" fontWeight="semibold"></Text>
           </Skeleton>
         </GridItem>
         <GridItem rowSpan={2} colSpan={4}>

@@ -7,7 +7,7 @@ const Header = () => (
     <Heading p="4" textAlign="center">
       Effect Free
     </Heading>
-    <Text size="lg" fontWeight="semibold" textAlign="center">
+    <Text fontSize="xl" fontWeight="semibold" textAlign="center" pb="2">
       Life without side effects and more
     </Text>
     <AspectRatio maxH="lg">
