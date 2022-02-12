@@ -1,6 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 import sanityClient from '../client';
+
+import { urlFor } from '../helpers/image';
 
 import type { RootState } from '../store';
 import type { SlugType, ApplicationState } from './common';
@@ -15,6 +18,7 @@ export interface AuthorType {
   slug: SlugType;
   name: string;
   description: DescriptionType[];
+  image: string;
 }
 
 const initialState: ApplicationState<AuthorType> = {
@@ -35,7 +39,15 @@ export const fetchAuthors = createAsyncThunk(
       bio
     }`,
     );
-    return data as AuthorType[];
+
+    const result = data.map((a: any) => ({
+      _id: a.id,
+      slug: a.slug,
+      name: a.name,
+      description: a.description,
+      image: urlFor(a.image).url(),
+    }));
+    return result as AuthorType[];
   },
 );
 

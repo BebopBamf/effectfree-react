@@ -17,12 +17,24 @@ const Blog = lazy(() => import('./pages/blog'));
 
 import Navbar from './components/navbar';
 
+import '../static/fonts/iosevka-plex.css';
+import '../static/fonts/iosevka-plex-aile.css';
+import '../static/fonts/iosevka-plex-etoile.css';
+
 const config = {
   initialColorMode: 'system',
   useSystemColorMode: true,
 };
 
-const theme = extendTheme({ config });
+const theme = extendTheme({
+  config,
+  fonts: {
+    heading:
+      '"Iosevka Plex Aile Web",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+    body: '"Iosevka Plex Aile Web",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"',
+    mono: '"Iosevka Plex Web",SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
+  },
+});
 
 const App = () => (
   <Suspense fallback={<Progress isIndeterminate />}>

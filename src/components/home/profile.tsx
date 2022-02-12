@@ -5,12 +5,13 @@ import {
   Container,
   Heading,
   Text,
+  Image,
   Skeleton,
   SkeletonCircle,
   SkeletonText,
 } from '@chakra-ui/react';
 
-import { useAppDispatch, useAppSelector } from '../../hooks/data';
+import { useAppDispatch, useAppSelector } from '../../helpers/data';
 
 import {
   selectAuthorBySlug,
@@ -35,7 +36,8 @@ const ProfileLoading = () => (
         <SkeletonCircle size="3xs" />
       </GridItem>
       <GridItem colSpan={4}>
-        <Skeleton />
+        <Skeleton height="20px" mb="2" />
+        <Skeleton height="15px" />
       </GridItem>
       <GridItem rowSpan={2} colSpan={4}>
         <SkeletonText />
@@ -47,7 +49,7 @@ const ProfileLoading = () => (
 type ProfileDisplayProps = { user: AuthorType };
 
 const ProfileDisplay = (props: ProfileDisplayProps) => {
-  const { name, slug } = props.user;
+  const { name, slug, image } = props.user;
 
   return (
     <Container id="mendoza" maxW="container.xl" centerContent>
@@ -60,7 +62,13 @@ const ProfileDisplay = (props: ProfileDisplayProps) => {
         gap={4}
       >
         <GridItem rowSpan={3} colSpan={1} justifySelf="center">
-          <SkeletonCircle size="3xs" />
+          <Image
+            borderRadius="full"
+            boxSize="3xs"
+            fit="cover"
+            src={image}
+            alt={slug.current}
+          />
         </GridItem>
         <GridItem colSpan={4}>
           <Text fontSize="lg" fontWeight="semibold">

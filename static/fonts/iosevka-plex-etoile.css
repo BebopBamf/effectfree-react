@@ -1,0 +1,315 @@
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-etoile-thin.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-thin.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-etoile-thinoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-thinoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web Oblique';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-etoile-thinoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-thinoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-etoile-thinitalic.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-thinitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-etoile-extralight.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-extralight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-etoile-extralightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-extralightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web Oblique';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-etoile-extralightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-extralightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-etoile-extralightitalic.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-extralightitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-etoile-light.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-etoile-lightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-lightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web Oblique';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-etoile-lightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-lightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-etoile-lightitalic.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-lightitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-etoile-regular.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-etoile-oblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-oblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web Oblique';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-etoile-oblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-oblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-etoile-italic.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-etoile-medium.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-etoile-mediumoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-mediumoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web Oblique';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-etoile-mediumoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-mediumoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-etoile-mediumitalic.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-mediumitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-etoile-semibold.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-semibold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-etoile-semiboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-semiboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web Oblique';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-etoile-semiboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-semiboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-etoile-semibolditalic.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-semibolditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-etoile-bold.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-etoile-boldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-boldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web Oblique';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-etoile-boldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-boldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-etoile-bolditalic.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-bolditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-etoile-extrabold.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-extrabold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-etoile-extraboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-extraboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web Oblique';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-etoile-extraboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-extraboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-etoile-extrabolditalic.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-extrabolditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-etoile-heavy.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-heavy.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-etoile-heavyoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-heavyoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web Oblique';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-etoile-heavyoblique.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-heavyoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Etoile Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-etoile-heavyitalic.woff2') format('woff2'), url('ttf/iosevka-plex-etoile-heavyitalic.ttf') format('truetype');
+}
