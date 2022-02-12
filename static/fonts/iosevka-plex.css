@@ -1,0 +1,630 @@
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-thin.woff2') format('woff2'), url('ttf/iosevka-plex-thin.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extendedthin.woff2') format('woff2'), url('ttf/iosevka-plex-extendedthin.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-thinoblique.woff2') format('woff2'), url('ttf/iosevka-plex-thinoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-thinoblique.woff2') format('woff2'), url('ttf/iosevka-plex-thinoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extendedthinoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedthinoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: expanded;
+	src: url('woff2/iosevka-plex-extendedthinoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedthinoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-thinitalic.woff2') format('woff2'), url('ttf/iosevka-plex-thinitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 100;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extendedthinitalic.woff2') format('woff2'), url('ttf/iosevka-plex-extendedthinitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extralight.woff2') format('woff2'), url('ttf/iosevka-plex-extralight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extendedextralight.woff2') format('woff2'), url('ttf/iosevka-plex-extendedextralight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extralightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extralightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-extralightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extralightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extendedextralightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedextralightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: expanded;
+	src: url('woff2/iosevka-plex-extendedextralightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedextralightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extralightitalic.woff2') format('woff2'), url('ttf/iosevka-plex-extralightitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 200;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extendedextralightitalic.woff2') format('woff2'), url('ttf/iosevka-plex-extendedextralightitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-light.woff2') format('woff2'), url('ttf/iosevka-plex-light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extendedlight.woff2') format('woff2'), url('ttf/iosevka-plex-extendedlight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-lightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-lightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-lightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-lightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extendedlightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedlightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: expanded;
+	src: url('woff2/iosevka-plex-extendedlightoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedlightoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-lightitalic.woff2') format('woff2'), url('ttf/iosevka-plex-lightitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 300;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extendedlightitalic.woff2') format('woff2'), url('ttf/iosevka-plex-extendedlightitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-regular.woff2') format('woff2'), url('ttf/iosevka-plex-regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extended.woff2') format('woff2'), url('ttf/iosevka-plex-extended.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-oblique.woff2') format('woff2'), url('ttf/iosevka-plex-oblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-oblique.woff2') format('woff2'), url('ttf/iosevka-plex-oblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extendedoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	src: url('woff2/iosevka-plex-extendedoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-italic.woff2') format('woff2'), url('ttf/iosevka-plex-italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 400;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extendeditalic.woff2') format('woff2'), url('ttf/iosevka-plex-extendeditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-medium.woff2') format('woff2'), url('ttf/iosevka-plex-medium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extendedmedium.woff2') format('woff2'), url('ttf/iosevka-plex-extendedmedium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-mediumoblique.woff2') format('woff2'), url('ttf/iosevka-plex-mediumoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-mediumoblique.woff2') format('woff2'), url('ttf/iosevka-plex-mediumoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extendedmediumoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedmediumoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: expanded;
+	src: url('woff2/iosevka-plex-extendedmediumoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedmediumoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-mediumitalic.woff2') format('woff2'), url('ttf/iosevka-plex-mediumitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 500;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extendedmediumitalic.woff2') format('woff2'), url('ttf/iosevka-plex-extendedmediumitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-semibold.woff2') format('woff2'), url('ttf/iosevka-plex-semibold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extendedsemibold.woff2') format('woff2'), url('ttf/iosevka-plex-extendedsemibold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-semiboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-semiboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-semiboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-semiboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extendedsemiboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedsemiboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: expanded;
+	src: url('woff2/iosevka-plex-extendedsemiboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedsemiboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-semibolditalic.woff2') format('woff2'), url('ttf/iosevka-plex-semibolditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 600;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extendedsemibolditalic.woff2') format('woff2'), url('ttf/iosevka-plex-extendedsemibolditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-bold.woff2') format('woff2'), url('ttf/iosevka-plex-bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extendedbold.woff2') format('woff2'), url('ttf/iosevka-plex-extendedbold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-boldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-boldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-boldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-boldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extendedboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	src: url('woff2/iosevka-plex-extendedboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-bolditalic.woff2') format('woff2'), url('ttf/iosevka-plex-bolditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 700;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extendedbolditalic.woff2') format('woff2'), url('ttf/iosevka-plex-extendedbolditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extrabold.woff2') format('woff2'), url('ttf/iosevka-plex-extrabold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extendedextrabold.woff2') format('woff2'), url('ttf/iosevka-plex-extendedextrabold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extraboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extraboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-extraboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extraboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extendedextraboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedextraboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: expanded;
+	src: url('woff2/iosevka-plex-extendedextraboldoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedextraboldoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extrabolditalic.woff2') format('woff2'), url('ttf/iosevka-plex-extrabolditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 800;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extendedextrabolditalic.woff2') format('woff2'), url('ttf/iosevka-plex-extendedextrabolditalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-heavy.woff2') format('woff2'), url('ttf/iosevka-plex-heavy.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: normal;
+	src: url('woff2/iosevka-plex-extendedheavy.woff2') format('woff2'), url('ttf/iosevka-plex-extendedheavy.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-heavyoblique.woff2') format('woff2'), url('ttf/iosevka-plex-heavyoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	src: url('woff2/iosevka-plex-heavyoblique.woff2') format('woff2'), url('ttf/iosevka-plex-heavyoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: oblique;
+	src: url('woff2/iosevka-plex-extendedheavyoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedheavyoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web Oblique';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	src: url('woff2/iosevka-plex-extendedheavyoblique.woff2') format('woff2'), url('ttf/iosevka-plex-extendedheavyoblique.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: normal;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-heavyitalic.woff2') format('woff2'), url('ttf/iosevka-plex-heavyitalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Iosevka Plex Web';
+	font-display: swap;
+	font-weight: 900;
+	font-stretch: expanded;
+	font-style: italic;
+	src: url('woff2/iosevka-plex-extendedheavyitalic.woff2') format('woff2'), url('ttf/iosevka-plex-extendedheavyitalic.ttf') format('truetype');
+}
